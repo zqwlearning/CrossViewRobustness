@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrossViewRobustness</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Benchmarking the Robustness of Cross-view Geo-localization Models</h1>
+	<h2>Qingwang Zhang, Yingying Zhu*</h2>
+	<h3 class="unit">Shenzhen University, *Corresponding author</h3>
+	<a href="https://pan.baidu.com/s/1BAJ1Raz5dcpEVGk_trON1w?pwd=ECCV"><button class="code">Dataset (Baidu Netdisk)</button></a>
+	<a href=""><button class="code">Dataset (private cloud)</button></a>
+    <a href="https://openreview.net/pdf?id=x8mzNomCRe"><button class="paper">Paper</button></a>
+  	<a href=""><button class="code">Code</button></a>
+  </header>
+
+  <main>
+    <div>
+		<img class="img-overall" src="images/overall.jpg" alt="overall">
+	</div>
+	<div class="context">
+		<p class="title">Abstract</p>
+		<p class="text">
+			Cross-view geo-localization serves as a viable alternative to providing geographical location information when GPS signals are unstable or unavailable by matching ground images with geo-tagged aerial image databases. 
+			While significant progress has been made on some common benchmarks like CVUSA and CVACT, there remains a lack of comprehensive consideration for robustness against real-world environmental challenges such as adverse weather or sensor noise. 
+			This deficiency poses a significant challenge for deploying this technology in safety-critical domains like autonomous driving and robot navigation. 
+			To the best of our knowledge, there is currently no specialized benchmark for evaluating the robustness of cross-view geo-localization. 
+			To comprehensively and fairly evaluate the robustness of cross-view geo-localization models in real-world scenarios, we introduce 16 common types of data corruption. 
+			By synthesizing these corruptions on public datasets, we establish two fine-grained corruption robustness benchmarks (CVUSA-C and CVACT_val-C) and three comprehensive corruption robustness benchmarks (CVUSA-C-ALL, CVACT_val-C-ALL, and CVACT_test-C-ALL), covering approximately 1.5 million corrupted images. 
+			Subsequently, we conduct large-scale experiments on various cross-view geo-localization models to evaluate their robustness in corrupted environments and derive novel insights. 
+			Finally, we explore two data augmentation strategies as potential solutions to enhance model robustness. 
+			Combined with the training strategies proposed, these approaches effectively enhance the robustness of multiple models.
+		</p>
+		<div class="horizontal-line"></div>
+
+		<p class="title">Motivation</p>
+		<img class="img-motivation" src="images/motivation.jpg" alt="Motivation and Effects">
+		
+		<p class="title">Corrupted Images</p>
+		<p class="second-title">16 Corruption Types</p>
+		<img class="img-corruption" src="images/corruption.jpg" alt="Corruption">
+		<p class="second-title">5 Severity Levels</p>
+		<img class="img-corruption" src="images/severity.jpg" alt="Severity">
+
+		<p class="title">Robustness Enhancement Methods</p>
+		<img class="img-corruption" src="images/clahe-style.jpg" alt="Enhancement">
+
+		<p class="title">Details of Our Benchmarks</p>
+		<img class="img-corruption" src="images/benchmark.jpg" alt="Benchmark">
+
+		<p class="title">Benchmarking Results</p>
+		<p class="second-title">Fine-grained Corruption Robustness Benchmarking Results</p>
+		<img class="img-corruption" src="images/CVUSA-C.jpg" alt="CVUSA-C">
+		<img class="img-corruption" src="images/CVACT_val-C.jpg" alt="CVACT_val-C">
+		<img class="img-corruption" src="images/RCE.jpg" alt="RCE">
+		<p class="second-title">Comprehensive Corruption Robustness Benchmarking Results</p>
+		<img class="img-corruption" src="images/C-ALL.jpg" alt="C-ALL">
+		<p class="second-title">Robustness Enhancement Results</p>
+		<img class="img-corruption" src="images/Style.jpg" alt="Style">
+		<img class="img-corruption" src="images/CLAHE.jpg" alt="CLAHE">
+	</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 ZQW</p>
+  </footer>
+</body>
+
